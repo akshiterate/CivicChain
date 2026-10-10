@@ -1,0 +1,12 @@
+node_modules/
+artifacts/
+cache/
+.env
+frontend/dist/
+frontend/node_modules/
+frontend/.env
+caliper/node_modules/
+caliper/networkConfig.json
+caliper/contract.json
+caliper/report.html
+*.log

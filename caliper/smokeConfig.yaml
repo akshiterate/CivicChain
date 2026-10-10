@@ -1,0 +1,15 @@
+test:
+  name: CivicChain smoke only
+  description: Tiny smoke benchmark to validate Caliper + Hardhat wiring
+  workers:
+    number: 1
+  rounds:
+    - label: submit-smoke
+      description: Smoke test
+      txNumber: 5
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 2
+      workload:
+        module: workloads/submit.js

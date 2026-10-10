@@ -1,0 +1,35 @@
+test:
+  name: CivicChain benchmark
+  description: Submit + status-update on local Hardhat node. Never run against Sepolia.
+  workers:
+    number: 1
+  # One worker: the connector funds a single account and tracks its nonce.
+  # More workers sharing one account would reuse nonces and fail.
+  rounds:
+    - label: submit-smoke
+      description: Smoke test, few submits to validate setup
+      txNumber: 10
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 5
+      workload:
+        module: workloads/submit.js
+    - label: submit-load
+      description: Meaningful submit workload
+      txNumber: 100
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 20
+      workload:
+        module: workloads/submit.js
+    - label: status-update
+      description: Authority advances complaints Reported -> In Progress
+      txNumber: 20
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 5
+      workload:
+        module: workloads/status.js

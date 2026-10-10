@@ -1,0 +1,16 @@
+{
+  "name": "civicchain-caliper",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Caliper benchmarks for CivicChain (local Hardhat node only)",
+  "scripts": {
+    "bench": "caliper launch manager --caliper-workspace . --caliper-network networkConfig.json --caliper-benchconfig benchmarkConfig.yaml --caliper-flow-only-test --caliper-fabric-gateway-enabled false"
+  },
+  "dependencies": {
+    "ethers": "^6.13.0"
+  },
+  "devDependencies": {
+    "@hyperledger/caliper-cli": "0.5.0",
+    "@hyperledger/caliper-ethereum": "0.5.0"
+  }
+}
