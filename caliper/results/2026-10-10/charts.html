@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CivicChain Caliper report - 2026-10-10 14:07:59</title>
+<style>
+  body { font-family: "Segoe UI", Arial, sans-serif; margin: 32px; color: #1c2530; background: #f7f8fa; }
+  h1 { font-size: 22px; margin: 0 0 4px 0; }
+  h2 { font-size: 16px; margin: 28px 0 10px 0; border-bottom: 1px solid #dde2e8; padding-bottom: 6px; }
+  .sub { color: #5a6672; font-size: 13px; margin-bottom: 18px; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 3px; font-size: 12px; font-weight: 600; }
+  .badge.pass { background: #e2f2ea; color: #1f7a4d; }
+  .badge.warn { background: #fbe6e6; color: #b03030; }
+  .card { background: #ffffff; border: 1px solid #dde2e8; border-radius: 4px; padding: 18px; margin-bottom: 16px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; background: #ffffff; }
+  th, td { border: 1px solid #dde2e8; padding: 7px 10px; text-align: right; }
+  th { background: #eef1f5; text-align: right; }
+  th:first-child, td:first-child { text-align: left; }
+  svg.chart { width: 100%; height: auto; display: block; }
+  .chart-title { font-size: 13px; font-weight: 600; fill: #1c2530; }
+  .axis { font-size: 11px; fill: #5a6672; }
+  .bar-value { font-size: 11px; fill: #1c2530; }
+  .grid { stroke: #e3e7ec; stroke-width: 1; }
+  footer { margin-top: 24px; font-size: 12px; color: #5a6672; }
+  code { background: #eef1f5; padding: 1px 5px; border-radius: 3px; }
+</style>
+</head>
+<body>
+  <h1>CivicChain Caliper report</h1>
+  <div class="sub">
+    Run: 2026-10-10 14:07:59 &middot;
+    source log: <code>benchmark-full.log</code> &middot;
+    contract: <code>0xa513E6E4b8f2a923D98304ec87F64353C4D5C853</code> &middot;
+    chain: local Hardhat node (31337)
+    <br><span class="badge pass">ALL ROUNDS PASSED</span>
+  </div>
+
+  <div class="card">
+    <h2>Summary</h2>
+    <table>
+      <tr><th>Round</th><th>Succ</th><th>Fail</th><th>Send rate (TPS)</th><th>Max lat (s)</th><th>Min lat (s)</th><th>Avg lat (s)</th><th>Throughput (TPS)</th></tr>
+      <tr><td>submit-smoke</td><td>10</td><td>0</td><td>5.5</td><td>0.03</td><td>0.01</td><td>0.01</td><td>5.5</td></tr>
+<tr><td>submit-load</td><td>100</td><td>0</td><td>20.2</td><td>0.01</td><td>0.01</td><td>0.01</td><td>20.2</td></tr>
+<tr><td>status-update</td><td>20</td><td>0</td><td>5.3</td><td>0.01</td><td>0.01</td><td>0.01</td><td>5.3</td></tr>
+
+      <tr><td><strong>Total</strong></td><td><strong>130</strong></td><td><strong>0</strong></td><td colspan="5"></td></tr>
+    </table>
+  </div>
+
+  <div class="card"><svg class="chart" viewBox="0 0 760 300" role="img" aria-label="Send rate vs throughput">
+<text x="68" y="26" class="chart-title">Send rate vs throughput</text>
+<line x1="68" y1="232.0" x2="736" y2="232.0" class="grid" />
+<text x="60" y="236.0" class="axis" text-anchor="end">0.0</text>
+<line x1="68" y1="187.0" x2="736" y2="187.0" class="grid" />
+<text x="60" y="191.0" class="axis" text-anchor="end">5.8</text>
+<line x1="68" y1="142.0" x2="736" y2="142.0" class="grid" />
+<text x="60" y="146.0" class="axis" text-anchor="end">11.6</text>
+<line x1="68" y1="97.0" x2="736" y2="97.0" class="grid" />
+<text x="60" y="101.0" class="axis" text-anchor="end">17.4</text>
+<line x1="68" y1="52.0" x2="736" y2="52.0" class="grid" />
+<text x="60" y="56.0" class="axis" text-anchor="end">23.2</text>
+<rect x="103.6" y="189.4" width="65.1" height="42.6" fill="#7f9db9" />
+<text x="136.2" y="184.4" class="bar-value" text-anchor="middle">5.5</text>
+<rect x="179.3" y="189.4" width="65.1" height="42.6" fill="#1f7a4d" />
+<text x="211.9" y="184.4" class="bar-value" text-anchor="middle">5.5</text>
+<text x="179.3" y="254" class="axis" text-anchor="middle">submit-smoke</text>
+<rect x="326.3" y="75.5" width="65.1" height="156.5" fill="#7f9db9" />
+<text x="358.8" y="70.5" class="bar-value" text-anchor="middle">20.2</text>
+<rect x="402.0" y="75.5" width="65.1" height="156.5" fill="#1f7a4d" />
+<text x="434.6" y="70.5" class="bar-value" text-anchor="middle">20.2</text>
+<text x="402.0" y="254" class="axis" text-anchor="middle">submit-load</text>
+<rect x="549.0" y="190.9" width="65.1" height="41.1" fill="#7f9db9" />
+<text x="581.5" y="185.9" class="bar-value" text-anchor="middle">5.3</text>
+<rect x="624.7" y="190.9" width="65.1" height="41.1" fill="#1f7a4d" />
+<text x="657.2" y="185.9" class="bar-value" text-anchor="middle">5.3</text>
+<text x="624.7" y="254" class="axis" text-anchor="middle">status-update</text>
+<rect x="645.0" y="16" width="12" height="12" fill="#1f7a4d" />
+<text x="663.0" y="26" class="axis">Throughput</text>
+<rect x="550.5" y="16" width="12" height="12" fill="#7f9db9" />
+<text x="568.5" y="26" class="axis">Send rate</text>
+<text x="736" y="290" class="axis" text-anchor="end">transactions per second</text>
+</svg></div>
+  <div class="card"><svg class="chart" viewBox="0 0 760 300" role="img" aria-label="Average latency">
+<text x="68" y="26" class="chart-title">Average latency</text>
+<line x1="68" y1="232.0" x2="736" y2="232.0" class="grid" />
+<text x="60" y="236.0" class="axis" text-anchor="end">0.000</text>
+<line x1="68" y1="187.0" x2="736" y2="187.0" class="grid" />
+<text x="60" y="191.0" class="axis" text-anchor="end">0.003</text>
+<line x1="68" y1="142.0" x2="736" y2="142.0" class="grid" />
+<text x="60" y="146.0" class="axis" text-anchor="end">0.006</text>
+<line x1="68" y1="97.0" x2="736" y2="97.0" class="grid" />
+<text x="60" y="101.0" class="axis" text-anchor="end">0.009</text>
+<line x1="68" y1="52.0" x2="736" y2="52.0" class="grid" />
+<text x="60" y="56.0" class="axis" text-anchor="end">0.011</text>
+<rect x="103.6" y="75.5" width="130.2" height="156.5" fill="#b3701f" />
+<text x="168.7" y="70.5" class="bar-value" text-anchor="middle">0.01</text>
+<text x="179.3" y="254" class="axis" text-anchor="middle">submit-smoke</text>
+<rect x="326.3" y="75.5" width="130.2" height="156.5" fill="#b3701f" />
+<text x="391.4" y="70.5" class="bar-value" text-anchor="middle">0.01</text>
+<text x="402.0" y="254" class="axis" text-anchor="middle">submit-load</text>
+<rect x="549.0" y="75.5" width="130.2" height="156.5" fill="#b3701f" />
+<text x="614.1" y="70.5" class="bar-value" text-anchor="middle">0.01</text>
+<text x="624.7" y="254" class="axis" text-anchor="middle">status-update</text>
+<rect x="638.5" y="16" width="12" height="12" fill="#b3701f" />
+<text x="656.5" y="26" class="axis">Avg latency</text>
+<text x="736" y="290" class="axis" text-anchor="end">seconds</text>
+</svg></div>
+  <div class="card"><svg class="chart" viewBox="0 0 760 300" role="img" aria-label="Succeeded vs failed transactions">
+<text x="68" y="26" class="chart-title">Succeeded vs failed transactions</text>
+<line x1="68" y1="232.0" x2="736" y2="232.0" class="grid" />
+<text x="60" y="236.0" class="axis" text-anchor="end">0.0</text>
+<line x1="68" y1="187.0" x2="736" y2="187.0" class="grid" />
+<text x="60" y="191.0" class="axis" text-anchor="end">28.7</text>
+<line x1="68" y1="142.0" x2="736" y2="142.0" class="grid" />
+<text x="60" y="146.0" class="axis" text-anchor="end">57.5</text>
+<line x1="68" y1="97.0" x2="736" y2="97.0" class="grid" />
+<text x="60" y="101.0" class="axis" text-anchor="end">86.2</text>
+<line x1="68" y1="52.0" x2="736" y2="52.0" class="grid" />
+<text x="60" y="56.0" class="axis" text-anchor="end">115.0</text>
+<rect x="103.6" y="216.3" width="65.1" height="15.7" fill="#1f7a4d" />
+<text x="136.2" y="211.3" class="bar-value" text-anchor="middle">10</text>
+<rect x="179.3" y="232.0" width="65.1" height="0.0" fill="#b03030" />
+<text x="179.3" y="254" class="axis" text-anchor="middle">submit-smoke</text>
+<rect x="326.3" y="75.5" width="65.1" height="156.5" fill="#1f7a4d" />
+<text x="358.8" y="70.5" class="bar-value" text-anchor="middle">100</text>
+<rect x="402.0" y="232.0" width="65.1" height="0.0" fill="#b03030" />
+<text x="402.0" y="254" class="axis" text-anchor="middle">submit-load</text>
+<rect x="549.0" y="200.7" width="65.1" height="31.3" fill="#1f7a4d" />
+<text x="581.5" y="195.7" class="bar-value" text-anchor="middle">20</text>
+<rect x="624.7" y="232.0" width="65.1" height="0.0" fill="#b03030" />
+<text x="624.7" y="254" class="axis" text-anchor="middle">status-update</text>
+<rect x="671.0" y="16" width="12" height="12" fill="#b03030" />
+<text x="689.0" y="26" class="axis">Failed</text>
+<rect x="576.5" y="16" width="12" height="12" fill="#1f7a4d" />
+<text x="594.5" y="26" class="axis">Succeeded</text>
+<text x="736" y="290" class="axis" text-anchor="end">transactions</text>
+</svg></div>
+
+  <footer>
+    Numbers parsed from Caliper's own console report, not typed by hand.
+    Latencies reflect Hardhat automine on a local node; they say nothing about
+    Sepolia or mainnet performance. Charts are inline SVG, generated by
+    <code>caliper/makeReport.js</code> - no charting library.
+  </footer>
+</body>
+</html>

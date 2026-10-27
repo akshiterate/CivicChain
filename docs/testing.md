@@ -44,7 +44,9 @@ Deployed at: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 local node) is described in `README.md`; automated browser tests are out of
 scope for the two-day deadline.
 
-## Benchmark smoke — Caliper `smokeConfig.yaml`, 2026-10-10
+## Benchmark smoke — Caliper `smokeConfig.yaml`, 2026-10-26
 
-`submit-smoke: 5 succ, 0 fail, 2.5 TPS, avg latency 0.02s.` Full numbers in
-`docs/benchmarking.md`, raw log `caliper/results/benchmark-smoke-2026-10-10.log`.
+`submit-smoke: 5 succ, 0 fail, 2.5 TPS, avg latency 0.02s, 8.24s total.`
+Full three-round run the same session: 10/0 @5.5 TPS, 100/0 @20.2 TPS,
+20/0 @5.3 TPS. Numbers in `docs/benchmarking.md`, raw log
+`caliper/results/2026-10-26/benchmark-smoke.log`.

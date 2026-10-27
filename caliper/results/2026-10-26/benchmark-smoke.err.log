@@ -1,0 +1,9 @@
+npm.cmd : (node:19444) TimeoutNegativeWarning: -16 is a negative number.
+At line:1 char:48
++ ... in\caliper; & "C:\Program Files\nodejs\npm.cmd" run bench:smoke 2> re ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:19444) Ti...egative number.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Timeout duration was set to 1.
+(Use `node --trace-warnings ...` to show where the warning was created)

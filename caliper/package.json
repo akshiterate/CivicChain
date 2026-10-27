@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "description": "Caliper benchmarks for CivicChain (local Hardhat node only)",
   "scripts": {
-    "bench": "caliper launch manager --caliper-workspace . --caliper-network networkConfig.json --caliper-benchconfig benchmarkConfig.yaml --caliper-flow-only-test --caliper-fabric-gateway-enabled false"
+    "bench": "caliper launch manager --caliper-workspace . --caliper-benchconfig benchmarkConfig.yaml --caliper-networkconfig networkConfig.json --caliper-flow-only-test",
+    "bench:smoke": "caliper launch manager --caliper-workspace . --caliper-benchconfig smokeConfig.yaml --caliper-networkconfig networkConfig.json --caliper-flow-only-test",
+    "report": "node makeReport.js"
   },
   "dependencies": {
     "ethers": "^6.13.0"

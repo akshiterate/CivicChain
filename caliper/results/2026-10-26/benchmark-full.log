@@ -1,0 +1,117 @@
+
+> civicchain-caliper@1.0.0 bench
+> caliper launch manager --caliper-workspace . --caliper-benchconfig benchmarkConfig.yaml --caliper-networkconfig networkConfig.json --caliper-flow-only-test
+
+2026.10.26-13:27:23.462[32m info [39m [caliper] [cli-launch-manager] 	Set workspace path: C:\Users\asac\Documents\civicchain\caliper
+2026.10.26-13:27:23.464[32m info [39m [caliper] [cli-launch-manager] 	Set benchmark configuration path: C:\Users\asac\Documents\civicchain\caliper\benchmarkConfig.yaml
+2026.10.26-13:27:23.464[32m info [39m [caliper] [cli-launch-manager] 	Set network configuration path: C:\Users\asac\Documents\civicchain\caliper\networkConfig.json
+2026.10.26-13:27:23.465[32m info [39m [caliper] [cli-launch-manager] 	Set SUT type: ethereum
+2026.10.26-13:27:23.881[32m info [39m [caliper] [benchmark-validator] 	No observer specified, will default to `none`
+2026.10.26-13:27:23.881[32m info [39m [caliper] [caliper-engine] 	Starting benchmark flow
+2026.10.26-13:27:23.881[32m info [39m [caliper] [caliper-engine] 	Skipping start commands due to benchmark flow conditioning
+2026.10.26-13:27:23.882[32m info [39m [caliper] [caliper-engine] 	Skipping initialization phase due to benchmark flow conditioning
+2026.10.26-13:27:23.882[32m info [39m [caliper] [caliper-engine] 	Skipping install smart contract phase due to benchmark flow conditioning
+2026.10.26-13:27:23.914[32m info [39m [caliper] [monitor.js] 	No resource monitors specified
+2026.10.26-13:27:23.916[32m info [39m [caliper] [default-observer] 	Observer interval set to 5000 milliseconds
+2026.10.26-13:27:23.917[32m info [39m [caliper] [round-orchestrator] 	Preparing worker connections
+2026.10.26-13:27:23.918[32m info [39m [caliper] [worker-orchestrator] 	Launching worker 1 of 1
+2026.10.26-13:27:23.934[32m info [39m [caliper] [worker-orchestrator] 	Messenger not configured, entering configure phase...
+2026.10.26-13:27:23.935[32m info [39m [caliper] [worker-orchestrator] 	No existing workers detected, entering worker launch phase...
+2026.10.26-13:27:23.938[32m info [39m [caliper] [worker-orchestrator] 	Waiting for 1 workers to be connected...
+2026.10.26-13:27:24.398[32m info [39m [caliper] [cli-launch-worker] 	Set workspace path: C:\Users\asac\Documents\civicchain\caliper
+2026.10.26-13:27:24.400[32m info [39m [caliper] [cli-launch-worker] 	Set benchmark configuration path: C:\Users\asac\Documents\civicchain\caliper\benchmarkConfig.yaml
+2026.10.26-13:27:24.400[32m info [39m [caliper] [cli-launch-worker] 	Set network configuration path: C:\Users\asac\Documents\civicchain\caliper\networkConfig.json
+2026.10.26-13:27:24.401[32m info [39m [caliper] [cli-launch-worker] 	Set SUT type: ethereum
+2026.10.26-13:27:24.763[32m info [39m [caliper] [worker-orchestrator] 	1 workers connected, progressing to worker assignment phase.
+2026.10.26-13:27:24.764[32m info [39m [caliper] [worker-orchestrator] 	Workers currently unassigned, awaiting index assignment...
+2026.10.26-13:27:24.764[32m info [39m [caliper] [worker-orchestrator] 	Waiting for 1 workers to be assigned...
+2026.10.26-13:27:24.770[32m info [39m [caliper] [worker-orchestrator] 	1 workers assigned, progressing to worker initialization phase.
+2026.10.26-13:27:24.770[32m info [39m [caliper] [worker-orchestrator] 	Waiting for 1 workers to be ready...
+2026.10.26-13:27:24.772[32m info [39m [caliper] [worker-message-handler] 	Initializing Worker#0...
+2026.10.26-13:27:24.781[32m info [39m [caliper] [worker-message-handler] 	Worker#0 initialized
+2026.10.26-13:27:24.781[32m info [39m [caliper] [worker-orchestrator] 	1 workers ready, progressing to test preparation phase.
+2026.10.26-13:27:24.782[32m info [39m [caliper] [round-orchestrator] 	Started round 1 (submit-smoke)
+2026.10.26-13:27:24.785[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#0
+2026.10.26-13:27:24.804[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 0 is starting...
+2026.10.26-13:27:24.810[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 0 is completed
+2026.10.26-13:27:24.811[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#0
+2026.10.26-13:27:24.812[32m info [39m [caliper] [worker-orchestrator] 	1 workers prepared, progressing to test phase.
+2026.10.26-13:27:24.812[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
+2026.10.26-13:27:24.814[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#0
+2026.10.26-13:27:24.821[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
+2026.10.26-13:27:27.752[32m info [39m [caliper] [worker-message-handler] 	Worker#0 finished Round#0
+2026.10.26-13:27:32.789[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
+2026.10.26-13:27:32.794[32m info [39m [caliper] [report-builder] 	### Test result ###
+2026.10.26-13:27:32.799[32m info [39m [caliper] [report-builder] 	
++--------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+| Name         | Succ | Fail | Send Rate (TPS) | Max Latency (s) | Min Latency (s) | Avg Latency (s) | Throughput (TPS) |
+|--------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| submit-smoke | 10   | 0    | 5.5             | 0.06            | 0.01            | 0.02            | 5.5              |
++--------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+
+2026.10.26-13:27:32.801[32m info [39m [caliper] [round-orchestrator] 	Finished round 1 (submit-smoke) in 1.923 seconds
+2026.10.26-13:27:32.802[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
+2026.10.26-13:27:32.802[32m info [39m [caliper] [round-orchestrator] 	Waiting 5 seconds for the next round...
+2026.10.26-13:27:37.816[32m info [39m [caliper] [round-orchestrator] 	Started round 2 (submit-load)
+2026.10.26-13:27:37.822[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#1
+2026.10.26-13:27:37.827[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 1 is starting...
+2026.10.26-13:27:37.833[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 1 is completed
+2026.10.26-13:27:37.834[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#1
+2026.10.26-13:27:37.834[32m info [39m [caliper] [worker-orchestrator] 	1 workers prepared, progressing to test phase.
+2026.10.26-13:27:37.834[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
+2026.10.26-13:27:37.836[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#1
+2026.10.26-13:27:37.840[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
+2026.10.26-13:27:42.841[32m info [39m [caliper] [default-observer] 	[submit-load Round 1 Transaction Info] - Submitted: 81 Succ: 80 Fail:0 Unfinished:1
+2026.10.26-13:27:43.908[32m info [39m [caliper] [worker-message-handler] 	Worker#0 finished Round#1
+2026.10.26-13:27:48.924[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
+2026.10.26-13:27:48.929[32m info [39m [caliper] [report-builder] 	### Test result ###
+2026.10.26-13:27:48.931[32m info [39m [caliper] [report-builder] 	
++-------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+| Name        | Succ | Fail | Send Rate (TPS) | Max Latency (s) | Min Latency (s) | Avg Latency (s) | Throughput (TPS) |
+|-------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| submit-load | 100  | 0    | 20.2            | 0.02            | 0.01            | 0.01            | 20.2             |
++-------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+
+2026.10.26-13:27:48.932[32m info [39m [caliper] [round-orchestrator] 	Finished round 2 (submit-load) in 5.067 seconds
+2026.10.26-13:27:48.933[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
+2026.10.26-13:27:48.933[32m info [39m [caliper] [round-orchestrator] 	Waiting 5 seconds for the next round...
+2026.10.26-13:27:53.934[32m info [39m [caliper] [round-orchestrator] 	Started round 3 (status-update)
+2026.10.26-13:27:53.936[32m info [39m [caliper] [worker-message-handler] 	Preparing Worker#0 for Round#2
+2026.10.26-13:27:53.942[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 2 is starting...
+2026.10.26-13:27:53.952[32m info [39m [caliper] [caliper-worker] 	Info: worker 0 prepare test phase for round 2 is completed
+2026.10.26-13:27:53.952[32m info [39m [caliper] [worker-message-handler] 	Worker#0 prepared for Round#2
+2026.10.26-13:27:53.952[32m info [39m [caliper] [worker-orchestrator] 	1 workers prepared, progressing to test phase.
+2026.10.26-13:27:53.952[32m info [39m [caliper] [round-orchestrator] 	Monitors successfully started
+2026.10.26-13:27:53.954[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is starting Round#2
+2026.10.26-13:27:53.958[32m info [39m [caliper] [caliper-worker] 	Worker #0 starting workload loop
+2026.10.26-13:27:58.882[32m info [39m [caliper] [worker-message-handler] 	Worker#0 finished Round#2
+2026.10.26-13:28:03.893[32m info [39m [caliper] [default-observer] 	Resetting txCount indicator count
+2026.10.26-13:28:03.898[32m info [39m [caliper] [report-builder] 	### Test result ###
+2026.10.26-13:28:03.899[32m info [39m [caliper] [report-builder] 	
++---------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+| Name          | Succ | Fail | Send Rate (TPS) | Max Latency (s) | Min Latency (s) | Avg Latency (s) | Throughput (TPS) |
+|---------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| status-update | 20   | 0    | 5.3             | 0.05            | 0.01            | 0.01            | 5.2              |
++---------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+
+2026.10.26-13:28:03.899[32m info [39m [caliper] [round-orchestrator] 	Finished round 3 (status-update) in 3.921 seconds
+2026.10.26-13:28:03.900[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
+2026.10.26-13:28:03.901[32m info [39m [caliper] [report-builder] 	### All test results ###
+2026.10.26-13:28:03.902[32m info [39m [caliper] [report-builder] 	
++---------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+| Name          | Succ | Fail | Send Rate (TPS) | Max Latency (s) | Min Latency (s) | Avg Latency (s) | Throughput (TPS) |
+|---------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| submit-smoke  | 10   | 0    | 5.5             | 0.06            | 0.01            | 0.02            | 5.5              |
+|---------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| submit-load   | 100  | 0    | 20.2            | 0.02            | 0.01            | 0.01            | 20.2             |
+|---------------|------|------|-----------------|-----------------|-----------------|-----------------|------------------|
+| status-update | 20   | 0    | 5.3             | 0.05            | 0.01            | 0.01            | 5.2              |
++---------------+------+------+-----------------+-----------------+-----------------+-----------------+------------------+
+
+2026.10.26-13:28:03.914[32m info [39m [caliper] [report-builder] 	Generated report with path C:\Users\asac\Documents\civicchain\caliper\report.html
+2026.10.26-13:28:03.915[32m info [39m [caliper] [monitor.js] 	Stopping all monitors
+2026.10.26-13:28:03.915[32m info [39m [caliper] [worker-orchestrator] 	Sending exit message to connected workers
+2026.10.26-13:28:03.915[32m info [39m [caliper] [round-orchestrator] 	Benchmark finished in 39.133 seconds. Total rounds: 3. Successful rounds: 3. Failed rounds: 0.
+2026.10.26-13:28:03.916[32m info [39m [caliper] [caliper-engine] 	Skipping end command due to benchmark flow conditioning
+2026.10.26-13:28:03.916[32m info [39m [caliper] [cli-launch-manager] 	Benchmark successfully finished
+2026.10.26-13:28:03.917[32m info [39m [caliper] [worker-message-handler] 	Worker#0 is exiting

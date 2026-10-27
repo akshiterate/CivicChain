@@ -47,15 +47,21 @@ be a citizen.
 ### Benchmark (local only, never Sepolia)
 
 ```powershell
-& "C:\Program Files\nodejs\npx.cmd" hardhat node        # terminal 1
-node scripts/setupCaliper.js                            # deploy + write caliper config
-cd caliper
-& "C:\Program Files\nodejs\npm.cmd" install
-& "C:\Program Files\nodejs\npx.cmd" caliper launch manager --caliper-workspace . --caliper-benchconfig smokeConfig.yaml --caliper-networkconfig networkConfig.json --caliper-flow-only-test
-& "C:\Program Files\nodejs\npx.cmd" caliper launch manager --caliper-workspace . --caliper-benchconfig benchmarkConfig.yaml --caliper-networkconfig networkConfig.json --caliper-flow-only-test
+& "C:\Program Files\nodejs\npx.cmd" hardhat node        # terminal 1, leave running
+cd C:\Users\asac\Documents\civicchain
+node scripts/setupCaliper.js                            # fresh contract + rewrites caliper/networkConfig.json
+cd caliper                                              # required: config paths resolve from here
+& "C:\Program Files\nodejs\npm.cmd" install             # first time only
+& "C:\Program Files\nodejs\npm.cmd" run bench:smoke      # 5 tx wiring check
+& "C:\Program Files\nodejs\npm.cmd" run bench            # 3-round benchmark
+node makeReport.js results\<run-folder>\benchmark-full.log results\<run-folder>
 ```
 
-Results: `docs/benchmarking.md`, raw logs: `caliper/results/`.
+`node scripts/setupCaliper.js` must be re-run after **every** Hardhat node
+restart: a fresh chain has no contract at the old address and every transaction
+would revert. Each run gets its own folder, `caliper/results/YYYY-MM-DD/`,
+holding the Caliper logs, Caliper's own `report.html`, and the generated
+`charts.html` + `report.md` + `results.csv`. See `docs/benchmarking.md`.
 
 ### Sepolia deployment
 
